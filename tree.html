@@ -98,6 +98,16 @@
             drawTree(275, 500, 375, 500, 0);
         }
         draw();
+        
+        function mesmerize() {
+           var step = 0.1; 
+           setInterval(function () { 
+              hue += step; 
+              if (hue > 1) { hue = 1; step = -step; } 
+              if (hue < 0) { hue = 0; step = -step; } 
+              draw(); 
+           }, 250);
+        }
     </script>
  
 </body>
